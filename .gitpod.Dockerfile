@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y \
   curl \
   openjdk-11-jdk \
+  unzip \
   && rm -rf /var/lib/apt/lists/*
 
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
