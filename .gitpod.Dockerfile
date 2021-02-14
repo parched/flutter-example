@@ -17,15 +17,16 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools \
   && mv cmdline-tools latest \
   && rm commandlinetools*.zip \
   && yes | sdkmanager --licenses \
-  && sdkmanager 'platform-tools' 'platforms;android-30' 'build-tools;30.0.2'
+  && sdkmanager 'platform-tools' 'platforms;android-30' 'build-tools;30.0.3'
+
+ENV PATH ${PATH}:/opt/flutter/bin
 
 RUN cd /opt \
   && curl -O https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.22.6-stable.tar.xz \
   && tar -xf flutter*.tar.xz \
   && rm flutter*.tar.xz \
-  && chmod -R a+w flutter
-
-ENV PATH ${PATH}:/opt/flutter/bin
+  && chmod -R a+w flutter \
+  && flutter doctor
 
 # TODO: flutter precache
 
