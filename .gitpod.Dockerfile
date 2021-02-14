@@ -17,7 +17,7 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools \
   && mv cmdline-tools latest \
   && rm commandlinetools*.zip \
   && yes | sdkmanager --licenses \
-  && sdkmanager 'platform-tools'
+  && sdkmanager 'platform-tools' 'platforms;android-30' 'build-tools;30.0.2'
 
 RUN cd /opt \
   && curl -O https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.22.6-stable.tar.xz \
