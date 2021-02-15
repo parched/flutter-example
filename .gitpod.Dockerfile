@@ -2,9 +2,12 @@ FROM ubuntu:20.04
 
 RUN apt-get update && apt-get install -y \
   curl \
+  git \
+  libglu1-mesa \
   openjdk-11-jdk \
   unzip \
   xz-utils \
+  zip \
   && rm -rf /var/lib/apt/lists/*
 
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
