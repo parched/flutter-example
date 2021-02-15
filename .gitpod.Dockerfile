@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y --no-install-recommends \
   curl \
   git \
-  openjdk-11-jdk \
+  openjdk-11-jdk-headless \
   unzip \
   xz-utils \
   zip \
