@@ -30,7 +30,7 @@ RUN cd /opt \
   && tar -xf flutter*.tar.xz \
   && rm flutter*.tar.xz \
   && flutter doctor \
-  && chmod -R a+w flutter
+  && chmod -R go=u flutter
 
 # TODO: flutter precache
 
