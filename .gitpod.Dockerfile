@@ -22,11 +22,14 @@ RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools \
   && sdkmanager 'platform-tools' 'platforms;android-30' 'build-tools;30.0.3'
 
 ENV PATH ${PATH}:/opt/flutter/bin
+# Make the default match non-root users
+ENV TAR_OPTIONS --no-same-owner
 
 RUN cd /opt \
   && curl -O https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.22.6-stable.tar.xz \
   && tar -xf flutter*.tar.xz \
   && rm flutter*.tar.xz \
+  && flutter doctor \
   && chmod -R a+w flutter
 
 # TODO: flutter precache
