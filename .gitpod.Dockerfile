@@ -27,8 +27,7 @@ RUN cd /opt \
   && curl -O https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.22.6-stable.tar.xz \
   && tar -xf flutter*.tar.xz \
   && rm flutter*.tar.xz \
-  && chmod -R a+w flutter \
-  && flutter doctor
+  && chmod -R a+w flutter
 
 # TODO: flutter precache
 
