@@ -14,3 +14,8 @@ ports:
     onOpen: open-browser
   - port: 5037
     onOpen: ignore
+
+vscode:
+  extensions:
+    - dart-code.flutter@3.19.0:/MRpX1iDrjzN++URaPj9kw==
+    - dart-code.dart-code@3.19.2:aq53Ov11OfEpp/BTf5TPEA==
