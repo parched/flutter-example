@@ -2,5 +2,15 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: 'echo "TODO: Replace with init/build command"'
-    command: 'echo "TODO: Replace with command to start project"'
+  - init: remote-web-adb/gitpod-adb init
+    command: remote-web-adb/gitpod-adb &> .remote-web-adb.log
+
+ports:
+  - port: 8080
+    onOpen: ignore
+  - port: 5555
+    onOpen: ignore
+  - port: 3000
+    onOpen: open-browser
+  - port: 5037
+    onOpen: ignore

@@ -1,0 +1,3 @@
+[submodule "remote-web-adb"]
+	path = remote-web-adb
+	url = https://github.com/parched/remote-web-adb.git
